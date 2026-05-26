@@ -1,0 +1,42 @@
+{
+  "recruteur": {
+    "label": "💼 Recruteur",
+    "subjects": [
+      "Candidature au poste de Développeur TypeScript - [Votre Nom]",
+      "Candidature - Alternance IT - [Votre Nom]",
+      "Suivi de candidature - [Votre Nom]"
+    ],
+    "bodyTemplates": [
+      {
+        "id": "recruteur_classique",
+        "label": "Réponse classique à une annonce",
+        "file": "recruteur_classique.txt"
+      },
+      {
+        "id": "recruteur_spontane",
+        "label": "Candidature spontanée",
+        "file": "recruteur_spontane.txt"
+      }
+    ]
+  },
+  "prof": {
+    "label": "🎓 Enseignant / Encadreur",
+    "subjects": [
+      "Question concernant le cours de [Matière]",
+      "Rendu de projet - [Nom/Prénom] - [Groupe]",
+      "Demande de rendez-vous - Suivi de mémoire"
+    ],
+    "bodyTemplates": [
+      {
+        "id": "prof_devoir",
+        "label": "Envoi de projet / devoir",
+        "file": "prof_devoir.txt"
+      },
+      {
+        "id": "prof_absence",
+        "label": "Justification d'absence",
+        "file": "prof_absence.txt"
+      }
+    ]
+  }
+}
