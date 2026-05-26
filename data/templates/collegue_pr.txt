@@ -1,0 +1,4 @@
+Hello !
+
+Dès que tu as un moment de libre aujourd'hui, est-ce que tu pourrais jeter un œil à ma Pull Request sur la branche feature/cli ? 
+J'ai refactorisé le module de gestion des données et j'aimerais bien avoir ton avis sur l'implémentation avant de merge. Merci d'avance !

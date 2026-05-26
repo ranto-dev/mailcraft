@@ -1,0 +1,4 @@
+Bonjour,
+
+Nous avons le plaisir de vous informer que les livrables prévus pour ce jalon viennent d'être déployés sur votre environnement de recette.
+Cette version intègre les nouvelles fonctionnalités validées lors de notre dernier comité de suivi. Nous nous tenons à votre entière disposition pour recueillir vos retours et planifier la mise en production globale.

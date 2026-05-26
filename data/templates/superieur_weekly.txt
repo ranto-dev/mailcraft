@@ -1,0 +1,8 @@
+Bonjour [Nom du Manager],
+
+Voici un point rapide sur l'avancement de mes tâches de la semaine :
+- [Tâche 1] : Terminée et déployée avec succès.
+- [Tâche 2] : En cours de finalisation, phase de tests démarrée.
+- [Tâche 3] : En attente des retours de l'équipe design.
+
+Aucun point bloquant majeur à signaler de mon côté. Bon week-end !

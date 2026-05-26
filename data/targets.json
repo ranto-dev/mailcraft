@@ -1,15 +1,15 @@
 {
   "recruteur": {
-    "label": "💼 Recruteur",
+    "label": "💼 Recruteur / Responsable RH",
     "subjects": [
       "Candidature au poste de Développeur TypeScript - [Votre Nom]",
       "Candidature - Alternance IT - [Votre Nom]",
-      "Suivi de candidature - [Votre Nom]"
+      "Suivi de ma candidature pour le poste de Développeur - [Votre Nom]"
     ],
     "bodyTemplates": [
       {
         "id": "recruteur_classique",
-        "label": "Réponse classique à une annonce",
+        "label": "Réponse classique à une offre",
         "file": "recruteur_classique.txt"
       },
       {
@@ -19,12 +19,87 @@
       }
     ]
   },
+  "pdg": {
+    "label": "👑 PDG / Directeur Général",
+    "subjects": [
+      "Proposition stratégique : Optimisation de nos outils internes",
+      "Point de situation annuel et perspectives - [Votre Nom]",
+      "Demande d'arbitrage concernant le projet [Nom du Projet]"
+    ],
+    "bodyTemplates": [
+      {
+        "id": "pdg_innovation",
+        "label": "Soumettre une idée d'innovation",
+        "file": "pdg_innovation.txt"
+      },
+      {
+        "id": "pdg_point_strategique",
+        "label": "Demande de point d'avancement",
+        "file": "pdg_point_strategique.txt"
+      }
+    ]
+  },
+  "superieur": {
+    "label": "📈 Supérieur Hiérarchique (N+1 / Manager)",
+    "subjects": [
+      "Rapport hebdomadaire d'activité - [Votre Nom]",
+      "Alerte / Bloquant sur le projet [Nom du Projet]",
+      "Demande de validation pour les congés de [Mois]"
+    ],
+    "bodyTemplates": [
+      {
+        "id": "superieur_weekly",
+        "label": "Rapport hebdomadaire",
+        "file": "superieur_weekly.txt"
+      },
+      {
+        "id": "superieur_bloquant",
+        "label": "Signalement d'un problème bloquant",
+        "file": "superieur_bloquant.txt"
+      }
+    ]
+  },
+  "collegue_pro": {
+    "label": "🧑‍💻 Collègue de travail",
+    "subjects": [
+      "Point sur la relecture de la Pull Request #[Numéro]",
+      "Question technique concernant l'API [Nom]",
+      "Synchronisation rapide avant la réunion de [Heure/Jour]"
+    ],
+    "bodyTemplates": [
+      {
+        "id": "collegue_pr",
+        "label": "Demande de revue de code / PR",
+        "file": "collegue_pr.txt"
+      },
+      {
+        "id": "collegue_Aide",
+        "label": "Demande d'aide technique ponctuelle",
+        "file": "collegue_aide.txt"
+      }
+    ]
+  },
+  "encadreur_pro": {
+    "label": "🏢 Maître de stage / Tuteur en entreprise",
+    "subjects": [
+      "Bilan de mi-parcours / Livrables de stage",
+      "Validation de mon rapport de stage - [Votre Nom]",
+      "Planification du point de suivi mensuel"
+    ],
+    "bodyTemplates": [
+      {
+        "id": "encadreur_pro_rapport",
+        "label": "Envoi du plan du rapport",
+        "file": "encadreur_pro_rapport.txt"
+      }
+    ]
+  },
   "prof": {
-    "label": "🎓 Enseignant / Encadreur",
+    "label": "🎓 Enseignant / Professeur",
     "subjects": [
       "Question concernant le cours de [Matière]",
       "Rendu de projet - [Nom/Prénom] - [Groupe]",
-      "Demande de rendez-vous - Suivi de mémoire"
+      "Demande de précisions sur les modalités d'examen"
     ],
     "bodyTemplates": [
       {
@@ -36,6 +111,101 @@
         "id": "prof_absence",
         "label": "Justification d'absence",
         "file": "prof_absence.txt"
+      }
+    ]
+  },
+  "encadreur_pedago": {
+    "label": "🏫 Encadreur Pédagogique (Université/École)",
+    "subjects": [
+      "Suivi d'avancement du mémoire de fin d'études - [Votre Nom]",
+      "Validation du sujet de projet de fin d'études",
+      "Demande de rendez-vous d'encadrement"
+    ],
+    "bodyTemplates": [
+      {
+        "id": "encadreur_pedago_memoire",
+        "label": "Envoi d'un chapitre du mémoire",
+        "file": "encadreur_pedago_memoire.txt"
+      }
+    ]
+  },
+  "client": {
+    "label": "🤝 Client / Partenaire externe",
+    "subjects": [
+      "Livraison des fonctionnalités de la version v[Version]",
+      "Compte-rendu de notre atelier de travail du [Date]",
+      "Suivi de la facturation - Prestation [Nom]"
+    ],
+    "bodyTemplates": [
+      {
+        "id": "client_livraison",
+        "label": "Livraison de projet ou sprint",
+        "file": "client_livraison.txt"
+      },
+      {
+        "id": "client_relance",
+        "label": "Relance courtoise d'information",
+        "file": "client_relance.txt"
+      }
+    ]
+  },
+  "admin": {
+    "label": "🏛️ Services Administratifs (Scolarité, RH...)",
+    "subjects": [
+      "Demande d'attestation de scolarité / de présence",
+      "Dossier de candidature - Pièces complémentaires",
+      "Signalement d'une anomalie sur ma fiche de paie"
+    ],
+    "bodyTemplates": [
+      {
+        "id": "admin_attestation",
+        "label": "Demande de document officiel",
+        "file": "admin_attestation.txt"
+      }
+    ]
+  },
+  "support": {
+    "label": "🛠️ Support Technique / Service Client",
+    "subjects": [
+      "Incident critique : Dysfonctionnement sur le serveur [Nom]",
+      "Demande d'ouverture d'accès pour le nouvel outil",
+      "Bug persistant sur l'environnement de staging"
+    ],
+    "bodyTemplates": [
+      {
+        "id": "support_ticket",
+        "label": "Ouverture de ticket d'incident",
+        "file": "support_ticket.txt"
+      }
+    ]
+  },
+  "famille": {
+    "label": "🏠 Famille / Proches",
+    "subjects": [
+      "Des petites nouvelles d'ici ! ☕",
+      "Organisation du prochain week-end / repas",
+      "Photos et récap de ma semaine"
+    ],
+    "bodyTemplates": [
+      {
+        "id": "famille_nouvelles",
+        "label": "Prendre et donner des nouvelles",
+        "file": "famille_nouvelles.txt"
+      }
+    ]
+  },
+  "amis": {
+    "label": "👋 Amis",
+    "subjects": [
+      "Dispo pour un café / une bière cette semaine ? 🍻",
+      "Lien du projet cool dont je t'ai parlé !",
+      "Soirée ce week-end (Date & Heure)"
+    ],
+    "bodyTemplates": [
+      {
+        "id": "amis_invit",
+        "label": "Invitation / Sortie",
+        "file": "amis_invit.txt"
       }
     ]
   }
