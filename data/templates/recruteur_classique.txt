@@ -2,6 +2,6 @@ Bonjour Monsieur/Madame,
 
 C'est avec un grand intérêt que j'ai pris connaissance de votre offre d'emploi pour le poste de Développeur. 
 
-Passionné par les technologies modernes et rigoureux, je serais ravi de mettre mes compétences au service de votre équipe. Vous trouverez en pièce jointe mon Curriculum Vitae ainsi que ma lettre de motivation détaillant mon parcours.
+Passionné par les technologies modernes et rigoureux, je serais ravi de mettre mes compétences au service de votre équipe. {{attachments_phrase}}
 
 Dans l'attente d'un retour de votre part, je vous prie d'agréer, Monsieur/Madame, l'expression de mes salutations distinguées.

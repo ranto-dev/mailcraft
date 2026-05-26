@@ -1,6 +1,6 @@
 Bonjour Monsieur/Madame,
 
-Je vous prie de bien vouloir trouver ci-joint mon rendu pour le projet de [Matière]. 
+{{attachments_phrase}}
 
 J'ai veillé à respecter l'ensemble des consignes demandées. N'hésitez pas à me faire part de vos retours ou si un élément venait à manquer.
 

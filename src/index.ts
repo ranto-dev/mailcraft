@@ -6,6 +6,7 @@ import {
   getAvailableFooters,
   loadFooter,
 } from "./config";
+import { handleAttachmentsPrompt } from "./attachments"; // 1. Import du nouveau module
 
 async function main() {
   intro(
@@ -15,6 +16,7 @@ async function main() {
   const config = loadTargetsConfig();
   const targetKeys = Object.keys(config);
 
+  // Sélection de la cible
   const targetSelection = (await select({
     message: "À quel type de destinataire écrivez-vous ?",
     options: targetKeys.map((key) => ({
@@ -25,6 +27,7 @@ async function main() {
 
   const selectedTarget = config[targetSelection];
 
+  // Sélection de l'Objet
   const subjectOptions = selectedTarget.subjects.map((subj) => ({
     value: subj,
     label: subj,
@@ -46,6 +49,7 @@ async function main() {
     })) as string;
   }
 
+  // Sélection du Corps de texte
   const bodyTemplateSelection = (await select({
     message: "Choisissez un modèle pour le corps du texte :",
     options: selectedTarget.bodyTemplates.map((t) => ({
@@ -56,6 +60,21 @@ async function main() {
 
   let emailBody = loadBodyTemplate(bodyTemplateSelection);
 
+  // 2. Gestion dynamique des pièces jointes
+  const attachmentResult = await handleAttachmentsPrompt(targetSelection);
+
+  // Remplacement de la balise dans le texte
+  if (emailBody.includes("{{attachments_phrase}}")) {
+    emailBody = emailBody.replace(
+      "{{attachments_phrase}}",
+      attachmentResult.phrase,
+    );
+  } else if (attachmentResult.hasAttachments) {
+    // Sécurité : si le template n'a pas la balise mais qu'il y a des PJ, on l'ajoute à la fin du corps
+    emailBody += `\n\n${attachmentResult.phrase}`;
+  }
+
+  // Sélection du Footer
   const footers = getAvailableFooters();
   const footerSelection = (await select({
     message: "Choisissez votre signature / footer :",
@@ -64,6 +83,7 @@ async function main() {
 
   const emailFooter = loadFooter(footerSelection);
 
+  // Rendu final
   console.log("\n" + pc.bold(pc.underline("--- APPERÇU DE VOTRE EMAIL ---")));
   console.log(pc.cyan(`Objet : `) + chosenSubject);
   console.log(pc.gray("----------------------------------------------"));
