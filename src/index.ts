@@ -6,16 +6,15 @@ import {
   loadBodyTemplate,
   getAvailableFooters,
   loadFooter,
-} from "./config";
-import { handleAttachmentsPrompt } from "./attachments";
+  type TargetConfig,
+} from "./config.js";
+import { handleAttachmentsPrompt } from "./attachments.js";
 
 async function main() {
-  // Un bel en-tête moderne aux couleurs de MailCraft
   intro(
     pc.bgCyan(pc.black(" ✉️  MAILCRAFT - Générateur de structure d'emails ")),
   );
 
-  // 1. Chargement de la configuration globale depuis targets.json
   const config = loadTargetsConfig();
   const targetKeys = Object.keys(config);
 
@@ -28,7 +27,6 @@ async function main() {
     return;
   }
 
-  // 2. Sélection de la cible (Type de destinataire)
   const targetSelection = await select({
     message: "À quel type de destinataire écrivez-vous ?",
     options: targetKeys.map((key) => ({
@@ -37,7 +35,6 @@ async function main() {
     })),
   });
 
-  // Sécurité en cas d'annulation (Ctrl+C)
   if (typeof targetSelection === "symbol") {
     outro(pc.yellow("Opération annulée. À la prochaine !"));
     return;
@@ -78,7 +75,6 @@ async function main() {
     chosenSubject = customText;
   }
 
-  // 4. Sélection du Modèle de corps de texte
   const bodyTemplateSelection = await select({
     message: "Choisissez un modèle pour le corps du texte :",
     options: selectedTarget.bodyTemplates.map((t) => ({
@@ -156,4 +152,3 @@ async function main() {
 main().catch((error) => {
   console.error(pc.red("Une erreur inattendue est survenue :"), error);
 });
-    

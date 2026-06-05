@@ -9,6 +9,7 @@ export interface AttachmentResult {
  * Demande à l'utilisateur de sélectionner ses pièces jointes et génère la phrase adaptée.
  * @param targetType Le type de destinataire pour adapter le ton (pro, étudiant, etc.)
  */
+
 export async function handleAttachmentsPrompt(
   targetType: string,
 ): Promise<AttachmentResult> {
