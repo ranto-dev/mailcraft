@@ -1,0 +1,26 @@
+name: test Pipeline
+'on':
+  push:
+    branches: &id001
+    - main
+  workflow_dispatch: {}
+  pull_request:
+    branches: *id001
+  repository_dispatch:
+    types:
+    - flowops_trigger
+jobs:
+  testing-project:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 📥 Checkout Repository
+      uses: actions/checkout@v4
+    - name: 🟢 Setup NodeJS Env
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
+        cache: npm
+    - name: 📦 Run NPM script
+      run: npm ci
+    - name: 📦 Run NPM script
+      run: npm test
