@@ -3,9 +3,9 @@ name: ci mailcraft Pipeline
   push:
     branches: &id001
     - main
-  workflow_dispatch: {}
   pull_request:
     branches: *id001
+  workflow_dispatch: {}
   repository_dispatch:
     types:
     - flowops_trigger
@@ -23,6 +23,4 @@ jobs:
     - name: 📦 Run NPM script
       run: npm ci
     - name: 📦 Run NPM script
-      run: npm run lint
-    - name: 📦 Run NPM script
-      run: npm run build
+      run: npm test
